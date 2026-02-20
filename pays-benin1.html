@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bénin : Politique, Relations avec l'UA, Geographie, Economie, Histoire... - Connaitrel'afrique.ua</title>
+    <meta name="description" content="Tout savoir sur le Sénégal : ses relations avec l'Union Africaine, sa geographie, son economie, son histoire, son drapeau et son hymne.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .marquee-container {
+            background: linear-gradient(135deg, #E67E22 0%, #E67E22 100%);
+            padding: 10px 0;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        .marquee-text {
+            font-family: 'Merriweather', serif;
+            font-size: 25px;
+            color: #fff;
+            white-space: nowrap;
+            animation: marquee 8s ease-in-out infinite alternate;
+            display: inline-block;
+            padding-left: 100%;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-20% - 80vw + 20px));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="header-row d-flex align-items-center justify-content-between w-100">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <div class="logo">
+                            <span class="logo-toute">Connaitre</span>
+                            <span class="logo-afrique">l'afrique</span>
+                        </div>
+                    </a>
+                    <div class="header-nav d-none d-lg-flex mx-auto">
+                        <a href="#" class="nav-item-link">Themes</a>
+                        <a href="pays.html" class="nav-item-link active">Pays Africains</a>
+                        <a href="#" class="nav-item-link">L'Afrique Pratique</a>
+                        <a href="a-propos.html" class="nav-item-link">Qui sommes-nous</a>
+                        <a href="#" class="nav-item-link">Newsletter</a>
+                    </div>
+                    <div class="header-right d-flex align-items-center">
+                        <button class="btn btn-link p-0 dark-mode-toggle me-2" type="button">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                        <button class="btn btn-link menu-toggle d-lg-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                            <i class="bi bi-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Country Hero Section -->
+    <section class="country-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="country-hero-map">
+                        <img src="src/img/carte benin1.jpg" alt="Carte du Sénégal en Afrique" class="hero-map-img">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="country-hero-info">
+                        <img src="https://flagcdn.com/w160/bj.png" alt="Drapeau du Sénégal" class="country-flag-large">
+                        <h1 class="country-name">Bénin</h1>
+                        <div class="share-buttons-inline">
+                            <a href="#" class="share-btn-small"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="share-btn-small"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="share-btn-small"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="share-btn-small"><i class="bi bi-envelope"></i></a>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm mt-3" onclick="window.print()">
+                            <i class="bi bi-file-pdf me-2"></i>Creer un PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Country Navigation Tabs -->
+    <nav class="country-tabs-nav sticky-top bg-white shadow-sm">
+        <div class="container">
+            <ul class="country-tabs nav" id="countryTabs">
+                <li class="nav-item"><a class="nav-link active" href="#identity">Identite</a></li>
+                <li class="nav-item"><a class="nav-link" href="#politique">Politique</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ua">Le pays et l'UA</a></li>
+                <li class="nav-item"><a class="nav-link" href="#geographie">Geographie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#economie">Economie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#histoire">Histoire</a></li>
+                <li class="nav-item"><a class="nav-link" href="#drapeau">Drapeau et hymne</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="country-page py-5">
+        <div class="container">
+            <!-- Membership Badge -->
+            <div class="membership-badge mb-4">
+                <span class="badge-text">Adhesion en 1963 (Membre fondateur de l'OUA)</span>
+                <span class="update-date">Derniere mise a jour le 02.02.2026</span>
+            </div>
+
+            <!-- Identity Section -->
+            <section id="identity" class="country-section mb-5">
+                <div class="row">
+                    <!-- Left Column: Geography & Demographics -->
+                    <div class="col-md-6">
+                        <div class="info-table">
+                            <div class="info-row">
+                                <span class="info-label">Langue officielle</span>
+                                <span class="info-value">Francais</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Indicatif tel.</span>
+                                <span class="info-value">+229</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Monnaie</span>
+                                <span class="info-value">Franc CFA (XOF)</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Fete nationale</span>
+                                <span class="info-value">1er août<br><small>Jour de l'Independance</small></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Hymne national</span>
+                                <span class="info-value">L'Aube Nouvelle<br><small>"Enfants du Bénin, debout !"</small></span>
+                            </div>
+                        </div>
+
+                        <h4 class="section-subtitle mt-4">Geographie et demographie</h4>
+                        <div class="info-table">
+                            <div class="info-row">
+                                <span class="info-label">Capitale</span>
+                                <span class="info-value">Porto-Novo</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Villes principales</span>
+                                <span class="info-value">Cotonou, Porto-Novo, Parakou, Djougou, Abomey</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Decoupage administratif</span>
+                                <span class="info-value">12 départements, 77 communes</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Population</span>
+                                <span class="info-value"><strong>13,3 millions</strong> (2024)<br><small>Banque Mondiale</small></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Superficie</span>
+                                <span class="info-value"><strong>112 622 km²</strong></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Indice de developpement humain</span>
+                                <span class="info-value">0,525 (2023)<br><small>ONU</small></span>
+                            </div>
+                        </div>
+
+                        <h4 class="section-subtitle mt-4">Environnement</h4>
+                        <div class="info-table">
+                            <div class="info-row">
+                                <span class="info-label">Emissions de gaz a effet de serre</span>
+                                <span class="info-value">0,58 tonnes/hab (2022)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Politics & Economy -->
+                    <div class="col-md-6">
+                        <h4 class="section-subtitle">Politique</h4>
+                        <div class="info-table">
+                            <div class="info-row">
+                                <span class="info-label">Systeme politique</span>
+                                <span class="info-value">Republique presidentielle</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Chef d'Etat</span>
+                                <span class="info-value"><strong>Patrice Talon</strong></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Prochaines elections</span>
+                                <span class="info-value">2026 (Présidentielles)<br>2027 (Legislatives)</span>
+                            </div>
+                        </div>
+
+                        <h4 class="section-subtitle mt-4">Economie</h4>
+                        <div class="info-table">
+                            <div class="info-row">
+                                <span class="info-label">PIB</span>
+                                <span class="info-value"><strong>19,5 milliards USD</strong> (2024)<br><small>Banque Mondiale</small></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">PIB par habitant</span>
+                                <span class="info-value"><strong>1 428 USD</strong> (2024)</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Taux de croissance</span>
+                                <span class="info-value">6,0 % (2024)</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Taux de chomage</span>
+                                <span class="info-value">1,5 % (2024)</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Dette publique</span>
+                                <span class="info-value">54,3 % du PIB (2024)</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Inflation</span>
+                                <span class="info-value">2,8 % (2024)</span>
+                            </div>
+                        </div>
+
+                        <!-- Infographic Card -->
+                        <div class="infographic-card mt-4">
+                            <h5><i class="bi bi-bar-chart me-2"></i>[Infographie] Le Bénin en un clin d'oeil</h5>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Voir l'infographie</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Politique Section -->
+            <section id="politique" class="country-section mb-5">
+                <h2 class="section-title-country">Politique</h2>
+
+                <p>Le Bénin est une <strong>république présidentielle</strong> dotée d'un système multipartite. Le président est élu au suffrage universel direct pour un mandat de cinq ans, renouvelable une fois. Le pays est reconnu pour avoir été le pionnier de la démocratisation en Afrique subsaharienne, avec sa Conférence nationale de 1990.</p>
+
+                <h3 class="subsection-title">Gouvernement actuel</h3>
+                <p>Depuis avril 2016, <strong>Patrice Talon</strong>, homme d'affaires et entrepreneur du secteur cotonnier, est le président de la République du Bénin. Réélu en 2021, il a entrepris d'importantes réformes politiques et économiques visant à moderniser le pays.</p>
+
+                <p>Son mandat est marqué par des réformes institutionnelles majeures, notamment la révision de la Constitution en 2019 et la réforme du système partisan limitant le nombre de partis politiques.</p>
+
+
+                <div class="highlight-box">
+                    <p><strong>Nicéphore Soglo</strong> a été le premier président démocratiquement élu du Bénin (1991-1996), après la Conférence nationale. Son élection a marqué la fin du régime marxiste-léniniste de Mathieu Kérékou.</p>
+                </div>
+
+                <h3 class="subsection-title">Chef d'Etat</h3>
+                <p><strong>Patrice Talon</strong> est né le 1er mai 1958 à Ouidah. Surnommé "le Roi du coton", il a fait fortune dans l'agro-industrie, notamment dans l'égrenage du coton. Après avoir soutenu plusieurs gouvernements, il s'est présenté à l'élection présidentielle de 2016 qu'il a remportée au second tour.</p>
+            </section>
+
+            <!-- UA Section -->
+            <section id="ua" class="country-section mb-5">
+                <h2 class="section-title-country">Le pays et l'Union Africaine</h2>
+
+                <p>Le Bénin est membre fondateur de l'<strong>Organisation de l'Unité Africaine (OUA)</strong> créée en 1963, devenue Union Africaine en 2002. Le pays joue un rôle actif dans les instances panafricaines et est reconnu pour sa stabilité démocratique.</p>
+
+                <p>Le Bénin est également membre de plusieurs organisations régionales :</p>
+                    <ul class="custom-list">
+                        <li><strong>CEDEAO</strong> (Communauté Économique des États de l'Afrique de l'Ouest) - membre fondateur en 1975</li>
+                        <li><strong>UEMOA</strong> (Union Économique et Monétaire Ouest-Africaine)</li>
+                        <li><strong>CEN-SAD</strong> (Communauté des États sahélo-sahariens)</li>
+                        <li><strong>Francophonie</strong></li>
+                    </ul>
+                <p>Le pays a accueilli plusieurs sommets régionaux et joue un rôle de médiateur dans les crises régionales.</p>
+
+                <h3 class="subsection-title">Contribution aux operations de paix</h3>
+                <p>Le Bénin contribue régulièrement aux opérations de maintien de la paix de l'ONU, avec des contingents déployés notamment en République Démocratique du Congo, au Mali et en République Centrafricaine.</p>
+            </section>
+
+            <!-- Geographie Section -->
+            <section id="geographie" class="country-section mb-5">
+                <h2 class="section-title-country">Geographie</h2>
+
+                <p>Situé en Afrique de l'Ouest, le Bénin s'étend sur <strong>112 622 km²</strong>. Il est bordé par l'océan Atlantique au sud (121 km de côtes), le Togo à l'ouest, le Burkina Faso et le Niger au nord, et le Nigeria à l'est.</p>
+                <p>Le relief est essentiellement constitué de plaines et de bas plateaux. Le climat varie du tropical humide au sud au soudanien au nord. Le pays compte plusieurs cours d'eau importants : l'Ouémé, le Mono, le Couffo et le Niger au nord.</p>
+
+                <h3 class="subsection-title">Regions et villes</h3>
+                <p><strong>Porto-Novo</strong>, la capitale officielle, abrite l'Assemblée nationale. <strong>Cotonou</strong> est la principale ville du pays, son centre économique et le siège du gouvernement. Les autres grandes villes incluent <strong>Parakou</strong> (carrefour commercial du nord), <strong>Djougou</strong>, <strong>Abomey</strong> (ancienne capitale du royaume du Dahomey) et <strong>Bohicon</strong>.</p>
+                <p>Avec plus de <strong>13 millions d'habitants</strong> en 2024, le Bénin connaît une croissance démographique soutenue. La population est jeune, avec une moyenne d'âge d'environ 18 ans.</p>
+            </section>
+
+            <!-- Economie Section -->
+            <section id="economie" class="country-section mb-5">
+                <h2 class="section-title-country">Economie</h2>
+
+                <p>L'économie béninoise repose principalement sur l'agriculture, le commerce de transit (notamment vers le Nigeria) et les services portuaires. Le coton est le principal produit d'exportation agricole.</p>
+                <p>Le Bénin a connu une croissance économique soutenue ces dernières années, portée par les investissements dans les infrastructures et le Programme d'Action du Gouvernement (PAG).</p>
+
+                <h3 class="subsection-title">Le port de Cotonou : poumon économique</h3>
+                <p>Le <strong>port autonome de Cotonou</strong> est l'un des plus importants d'Afrique de l'Ouest. Il assure le transit de marchandises pour les pays enclavés comme le Niger, le Burkina Faso et le Mali, représentant une part significative des recettes de l'État.</p>
+
+                <h3 class="subsection-title">Commerce exterieur</h3>
+                <p>Les principaux partenaires commerciaux du Bénin sont le Nigeria, la Chine, l'Inde, le Togo et la France. Les exportations sont dominées par le coton, les noix de cajou et les produits agricoles transformés.</p>
+            </section>
+
+            <!-- Histoire Section -->
+            <section id="histoire" class="country-section mb-5">
+                <h2 class="section-title-country">Histoire</h2>
+
+                <h3 class="subsection-title">Des royaumes anciens a la colonisation</h3>
+                <ul class="timeline-list">
+                    <li><strong>XVIIe siècle</strong> : Fondation du royaume du Dahomey par les rois d'Abomey.</li>
+                    <li><strong>XVIIIe-XIXe siècle</strong> : Apogée du royaume du Dahomey, connu pour ses Amazones et le commerce des esclaves.</li>
+                    <li><strong>1894</strong> : Défaite du roi Béhanzin face aux troupes françaises, colonisation du Dahomey.</li>
+                    <li><strong>1904</strong> : Le Dahomey devient une colonie de l'Afrique-Occidentale française (AOF).</li>
+                </ul>
+
+                <h3 class="subsection-title">L'independance et la construction nationale</h3>
+                <ul class="timeline-list">
+                    <li><strong>1er août 1960</strong> : Proclamation de l'indépendance du Dahomey. Hubert Maga devient le premier président.</li>
+                    <li><strong>1972</strong> : Coup d'État de Mathieu Kérékou, instauration d'un régime marxiste-léniniste.</li>
+                    <li><strong>1975</strong> : Le Dahomey devient la République populaire du Bénin.</li>
+                    <li><strong>1990</strong> : Conférence nationale, transition démocratique, le Bénin devient un modèle pour l'Afrique.</li>
+                    <li><strong>1991</strong> : Élection de Nicéphore Soglo, premier président démocratiquement élu.</li>
+                    <li><strong>2016</strong> : Élection de Patrice Talon à la présidence.</li>
+                    <li><strong>2021</strong> : Réélection de Patrice Talon pour un second mandat.</li>
+                </ul>
+            </section>
+
+            <!-- Drapeau Section -->
+            <section id="drapeau" class="country-section mb-5">
+                <h2 class="section-title-country">Drapeau et hymne</h2>
+
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4">
+                        <img src="https://flagcdn.com/w320/bj.png" alt="Drapeau du Sénégal" class="img-fluid flag-display">
+                    </div>
+                    <div class="col-md-8">
+                        <p>Le drapeau du Bénin est composé de <strong>deux bandes horizontales</strong> jaune et rouge, avec une bande verticale verte au guindant.</p>
+                        <ul>
+                            <li><strong>Vert</strong> : symbolise l'espérance et le renouveau</li>
+                            <li><strong>Jaune</strong> : représente les richesses du pays</li>
+                            <li><strong>Rouge</strong> : évoque le courage des ancêtres</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title mt-4">Hymne national : L'Aube Nouvelle</h3>
+                <p>L'hymne national du Bénin, intitulé "L'Aube Nouvelle", a été adopté lors de l'indépendance en 1960. Les paroles sont de <strong>Gilbert Jean Dagnon</strong>, sur une musique également de sa composition. Il célèbre la liberté retrouvée et l'unité nationale.</p>
+            </section>
+
+            <!-- Related Articles -->
+            <!--<section class="related-articles-country mb-5">
+                <h2 class="section-title-country">Derniers articles sur le Sénégal</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <a href="article.html" class="article-card-country">
+                            <div class="article-img">
+                                <img src="https://images.unsplash.com/photo-1589483232748-515c025575f5?w=400&h=250&fit=crop" alt="Sénégal">
+                            </div>
+                            <h4>Le Sénégal dans l'Union Africaine</h4>
+                            <div class="article-meta-small">
+                                <span>Synthese</span>
+                                <span>Mis a jour le 09.09.2025</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="article.html" class="article-card-country">
+                            <div class="article-img">
+                                <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?w=400&h=250&fit=crop" alt="Deputes">
+                            </div>
+                            <h4>Qui sont les representants sénégalais au Parlement panafricain ?</h4>
+                            <div class="article-meta-small">
+                                <span>Synthese</span>
+                                <span>Mis a jour le 22.01.2026</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="article.html" class="article-card-country">
+                            <div class="article-img">
+                                <img src="https://images.unsplash.com/photo-1604689598793-b8bf1dc445a1?w=400&h=250&fit=crop" alt="Economie">
+                            </div>
+                            <h4>Petrole et gaz : le Sénégal entre dans une nouvelle ere economique</h4>
+                            <div class="article-meta-small">
+                                <span>Economie</span>
+                                <span>Publie le 15.01.2026</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-outline-primary">Tous les articles sur le Sénégal</a>
+                </div>
+            </section>-->
+        </div>
+    </main>
+    <div class="marquee-container">
+        <div class="marquee-text">Site en cours de création</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4 class="footer-title">FORMATS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Actualite</a></li>
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Breves</a></li>
+                        <li><a href="#">Cartes et comparatifs</a></li>
+                        <li><a href="#">Droits et demarches</a></li>
+                        <li><a href="#">Fact checking</a></li>
+                        <li><a href="#">Glossaire</a></li>
+                        <li><a href="#">Infographies</a></li>
+                        <li><a href="#">Interviews et debats</a></li>
+                        <li><a href="#">Podcasts</a></li>
+                        <li><a href="#">Portraits</a></li>
+                        <li><a href="#">Pour / Contre</a></li>
+                        <li><a href="#">Questions-Reponses</a></li>
+                        <li><a href="#">Syntheses</a></li>
+                        <li><a href="#">Quiz</a></li>
+                    </ul>
+                    <h4 class="footer-title mt-4">PODCASTS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">L'Afrique en 3 minutes</a></li>
+                        <li><a href="#">Explique-moi l'Afrique</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="footer-title">THEMES</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tourisme durable pour le développement</a></li>
+                        <li><a href="#">Economie et social</a></li>
+                        <li><a href="#">Environnement</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Sport</a></li>
+                        <li><a href="#">Institutions</a></li>
+                        <li><a href="#">L'Afrique et le monde</a></li>
+                        <li><a href="#">Societe</a></li>
+                        <li><a href="#">Loisirs et découverte</a></li>
+                        <li><a href="#">Tous les dossiers</a></li>
+                    </ul>
+                    <h4 class="footer-title mt-4">PAYS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Les pays de l'Union Africaine</a></li>
+                        <li><a href="#">Les Etats membres en un clin d'oeil</a></li>
+                        <li><a href="#">Les communautes economiques regionales</a></li>
+                        <li><a href="#">Les pays observateurs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="footer-title">A PROPOS</h4>
+                    <ul class="footer-links">
+                        <li><a href="a-propos.html">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Nos evenements</a></li>
+                        <li><a href="#">Nos membres</a></li>
+                        <li><a href="#">Nos partenaires</a></li>
+                        <li><a href="#">Mentions legales</a></li>
+                    </ul>
+                    <h4 class="footer-title mt-4">NOS PRESTATIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Devenez partenaire pedagogique</a></li>
+                        <li><a href="#">Formez-vous aux questions africaines</a></li>
+                        <li><a href="#">Organisation d'un evenement</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="footer-title">CONTACT</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#">Nous rejoindre</a></li>
+                    </ul>
+                    <h4 class="footer-title mt-4">SUIVEZ-NOUS</h4>
+                    <div class="social-icons-footer">
+                        <a href="#" class="social-icon" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-icon" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                    <div class="footer-extra mt-4">
+                        <a href="#">Archives</a>
+                        <a href="#">Apprendre une langue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        // Smooth scroll for country tabs
+        document.querySelectorAll('.country-tabs a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                // Update active tab
+                document.querySelectorAll('.country-tabs a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

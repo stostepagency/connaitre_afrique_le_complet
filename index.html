@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connaitrel'afrique - Le site de reference sur les questions africaines</title>
+    <meta name="description" content="Le site de reference sur les questions africaines : information pedagogique et decryptage de l'actualite africaine.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="header-row d-flex align-items-center justify-content-between w-100">
+                    <!-- Logo à gauche -->
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <div class="logo">
+                            <span class="logo-toute">Connaitre</span>
+                            <span class="logo-afrique">l'afrique</span>
+                        </div>
+                    </a>
+
+                    <!-- Navigation au centre -->
+                    <div class="header-nav d-none d-lg-flex mx-auto">
+                        <div class="nav-item dropdown themes-dropdown">
+                            <a href="#" class="nav-item-link dropdown-toggle" id="themesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Themes
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-themes" aria-labelledby="themesDropdown">
+                                <div class="dropdown-grid">
+                                    <!-- Ligne 1 -->
+                                    <a class="dropdown-item" href="#"><i class="bi bi-briefcase"></i>Economie et social</a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-tree"></i>Environnement</a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-palette"></i>Culture</a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-trophy"></i>Sport</a>
+                                    <!-- Ligne 2 -->
+                                    <a class="dropdown-item" href="#"><i class="bi bi-building"></i>Institutions</a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-globe"></i>L'Afrique et le monde</a>
+                                    <!-- Ligne 3 -->
+                                    <a class="dropdown-item" href="#"><i class="bi bi-clock-history"></i>Histoire</a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-airplane"></i>Tourisme durable</a>
+                                    <a class="dropdown-item" href="#"><i class="bi bi-flag"></i>Vie politique</a>
+                                </div>
+                                <div class="dropdown-footer">
+                                    <a href="#">Toutes les rubriques de A a Z</a>
+                                    <a href="pays.html">Les pays de l'UA</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pays.html" class="nav-item-link">Pays Africains</a>
+                        <a href="#" class="nav-item-link">L'Afrique Pratique</a>
+                        <a href="a-propos.html" class="nav-item-link">Qui sommes-nous</a>
+                        <a href="#" class="nav-item-link">Newsletter</a>
+                    </div>
+
+                    <!-- Recherche et mode sombre à droite -->
+                    <div class="header-right d-flex align-items-center">
+                        <div class="search-box d-none d-md-flex align-items-center me-2">
+                            <input type="text" class="search-input form-control" placeholder="Rechercher..." id="headerSearchInput">
+                            <button class="search-btn btn btn-link p-0" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <button class="btn btn-link search-toggle-mobile d-md-none p-0 me-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <button class="btn btn-link p-0 dark-mode-toggle me-2" type="button" title="Mode sombre">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                        <button class="btn btn-link menu-toggle d-lg-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                            <i class="bi bi-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Side Menu Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+        <div class="offcanvas-header">
+            <div class="logo">
+                <span class="logo-toute">toute</span>
+                <span class="logo-afrique">l'afrique</span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column menu-nav">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="pays.html">Pays de l'UA</a></li>
+                <li class="nav-item"><a class="nav-link" href="article.html">Actualite</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Economie et social</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Environnement</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Histoire</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Institutions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">L'UA dans le monde</a></li>
+                <li class="nav-item"><a class="nav-link" href="a-propos.html">Qui sommes-nous</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Rechercher sur Toutel'afrique.ua</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form class="search-form" id="searchForm">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg" id="searchInput" placeholder="Rechercher un article, un pays, un theme...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div id="searchResults" class="search-results mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Tags -->
+    <section class="quick-tags py-2">
+        <div class="container">
+            <div class="tags-wrapper">
+                <a href="#" class="tag">CEDEAO</a>
+                <a href="#" class="tag">Sahel</a>
+                <a href="#" class="tag">Union Africaine</a>
+                <a href="#" class="tag">3 minutes</a>
+                <a href="#" class="tag">Fact checking</a>
+                <a href="#" class="tag">Podcast</a>
+                <a href="#" class="tag">Glossaire</a>
+                <a href="#" class="tag">Quiz</a>
+                <a href="#" class="tag">Agenda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News Carousel -->
+    <section class="featured-news-carousel py-5">
+        <div class="container">
+            <div class="section-header d-flex align-items-center justify-content-between mb-4">
+                <div class="d-flex align-items-center">
+                    <h2 class="section-title-side">A la Une</h2>
+                    <span class="arrow-icon ms-3"><i class="bi bi-arrow-right"></i></span>
+                </div>
+                <div class="carousel-nav-buttons">
+                    <button class="carousel-nav-btn prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-nav-btn next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 - Articles 1-3 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <a href="article.html" class="horizontal-card">
+                                    <div class="card-image">
+                                        <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&h=250&fit=crop" alt="Elections">
+                                    </div>
+                                    <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <h3>Elections presidentielles 2026 : le Nigeria se prepare pour un scrutin historique</h3>
+                                    <div class="card-meta">
+                                        <span>Droits et demarches</span>
+                                        <span>Publie le 26.01.2026</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="article.html" class="horizontal-card">
+                                    <div class="card-image">
+                                        <img src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=400&h=250&fit=crop" alt="Sommet UA">
+                                    </div>
+                                    <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <h3>Sommet de l'UA 2026 : les grandes decisions pour l'integration africaine</h3>
+                                    <div class="card-meta">
+                                        <span>Synthese</span>
+                                        <span>Publie le 02.02.2026</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="article.html" class="horizontal-card">
+                                    <div class="card-image">
+                                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=400&h=250&fit=crop" alt="Afrique du Sud">
+                                    </div>
+                                    <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <h3>Afrique du Sud : les enjeux economiques de la nouvelle coalition gouvernementale</h3>
+                                    <div class="card-meta">
+                                        <span>Actualite</span>
+                                        <span>Publie le 28.01.2026</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 - Articles 4-6 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <a href="article.html" class="horizontal-card">
+                                    <div class="card-image">
+                                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=400&h=250&fit=crop" alt="Ethiopie">
+                                    </div>
+                                    <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <h3>Ethiopie : le nouveau plan de developpement economique 2026-2030</h3>
+                                    <div class="card-meta">
+                                        <span>Economie</span>
+                                        <span>Publie le 25.01.2026</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="article.html" class="horizontal-card">
+                                    <div class="card-image">
+                                        <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=400&h=250&fit=crop" alt="Maroc">
+                                    </div>
+                                    <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <h3>Le Maroc accelere sa transition energetique vers les renouvelables</h3>
+                                    <div class="card-meta">
+                                        <span>Environnement</span>
+                                        <span>Publie le 01.02.2026</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="article.html" class="horizontal-card">
+                                    <div class="card-image">
+                                        <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=400&h=250&fit=crop" alt="Kenya">
+                                    </div>
+                                    <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                                    <h3>Kenya : Nairobi devient le hub technologique de l'Afrique de l'Est</h3>
+                                    <div class="card-meta">
+                                        <span>Innovation</span>
+                                        <span>Publie le 30.01.2026</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicateurs -->
+                <div class="carousel-indicators-custom mt-4">
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Discover Banner -->
+    <section class="discover-banner py-3">
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-left">
+                    <img src="https://cdn.pixabay.com/photo/2012/10/10/10/28/africa-60570_640.jpg" alt="Africa Map" class="banner-map">
+                </div>
+                <a href="#" class="banner-btn">
+                    + Suivre Toute l'Afrique sur Google Discover
+                </a>
+                <div class="banner-right">
+                    <div class="logo-small">
+                        <span class="logo-toute">toute</span>
+                        <span class="logo-afrique">l'afrique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="articles-grid py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?w=400&h=250&fit=crop" alt="CEDEAO">
+                        </div>
+                        <div class="article-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3 class="article-title">CEDEAO : quelles relations avec l'Union Africaine ?</h3>
+                        <div class="article-meta">
+                            <span class="meta-category">Synthese</span>
+                            <span class="meta-date">Mis a jour le 02.02.2026</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?w=400&h=250&fit=crop" alt="ZLECAf">
+                        </div>
+                        <div class="article-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3 class="article-title">Qu'est-ce que la Zone de libre-echange continentale africaine (ZLECAf) ?</h3>
+                        <div class="article-meta">
+                            <span class="meta-category">Questions-Reponses</span>
+                            <span class="meta-date">Publie le 27.01.2026</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?w=400&h=250&fit=crop" alt="Commerce">
+                        </div>
+                        <div class="article-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3 class="article-title">Les instruments de developpement commercial de l'Union Africaine</h3>
+                        <div class="article-meta">
+                            <span class="meta-category">Synthese</span>
+                            <span class="meta-date">Mis a jour le 28.01.2026</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&h=250&fit=crop" alt="Defense">
+                        </div>
+                        <div class="article-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3 class="article-title">Depenses militaires : quels pays africains investissent le plus dans la defense ?</h3>
+                        <div class="article-meta">
+                            <span class="meta-category">Cartes et comparatifs</span>
+                            <span class="meta-date">Mis a jour le 28.01.2026</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=400&h=250&fit=crop" alt="Force africaine">
+                        </div>
+                        <div class="article-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3 class="article-title">Quelles sont les forces de maintien de la paix en Afrique ?</h3>
+                        <div class="article-meta">
+                            <span class="meta-category">Cartes et comparatifs</span>
+                            <span class="meta-date">Mis a jour le 30.01.2026</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=250&fit=crop" alt="Education">
+                        </div>
+                        <div class="article-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3 class="article-title">Education superieure : quelle selection dans les universites africaines ?</h3>
+                        <div class="article-meta">
+                            <span class="meta-category">Cartes et comparatifs</span>
+                            <span class="meta-date">Publie le 01.02.2026</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-dark">Voir tous les articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dossier: Sahel -->
+    <section class="featured-dossier dossier-blue py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <span class="dossier-label">A la Une</span>
+                    <h2 class="dossier-title">Crise au Sahel : quels enjeux pour l'Afrique ?</h2>
+                    <p class="dossier-description">
+                        L'instabilite au Sahel depuis les annees 2010 a bouleverse les relations regionales.
+                        Entre insecurite, enjeux climatiques et defis humanitaires, ce dossier fait le tour
+                        des grandes questions soulevees par cette crise majeure.
+                    </p>
+                    <a href="#" class="btn btn-primary">Voir le dossier</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dossier-articles">
+                        <div class="dossier-main-image">
+                            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=500&h=300&fit=crop" alt="Sahel">
+                        </div>
+                        <div class="dossier-list">
+                            <article class="dossier-item">
+                                <h4>Sahel : chronologie des evenements depuis 2012</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 19.12.2025</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Quelles sont les operations de maintien de la paix au Sahel ?</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 23.10.2025</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Minerais, terres rares : pourquoi le sous-sol africain est-il strategique ?</h4>
+                                <div class="item-meta">
+                                    <span>Cartes et comparatifs</span>
+                                    <span>Mis a jour le 13.05.2025</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Africa in the UA Section -->
+    <section class="country-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Le Senegal dans l'UA</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="country-card">
+                        <div class="country-image">
+                            <img src="https://images.unsplash.com/photo-1589483232748-515c025575f5?w=400&h=250&fit=crop" alt="Senegal">
+                        </div>
+                        <h3>Le Senegal dans l'Union Africaine</h3>
+                        <div class="country-meta">
+                            <span>Synthese</span>
+                            <span>Mis a jour le 09.09.2025</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="country-card">
+                        <div class="country-image">
+                            <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?w=400&h=250&fit=crop" alt="Deputes">
+                        </div>
+                        <h3>Qui sont les representants senegalais au Parlement panafricain ?</h3>
+                        <div class="country-meta">
+                            <span>Synthese</span>
+                            <span>Mis a jour le 22.01.2026</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="country-card">
+                        <div class="country-image">
+                            <img src="https://images.unsplash.com/photo-1604689598793-b8bf1dc445a1?w=400&h=250&fit=crop" alt="Representation">
+                        </div>
+                        <h3>Comment le Senegal est-il represente au sein de l'Union Africaine ?</h3>
+                        <div class="country-meta">
+                            <span>Synthese</span>
+                            <span>Publie le 10.09.2025</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dossier: USA-Africa Relations -->
+    <section class="featured-dossier dossier-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <span class="dossier-label">A la Une</span>
+                    <h2 class="dossier-title">Quelles relations entre les Etats-Unis et l'Afrique ?</h2>
+                    <p class="dossier-description">
+                        Dans un contexte de competition internationale accrue, quelles sont les dynamiques
+                        a l'oeuvre entre les Etats-Unis et le continent africain ? Entre enjeux commerciaux,
+                        partenariats strategiques et cooperation au developpement, ce dossier explore les
+                        perspectives de cette relation en evolution.
+                    </p>
+                    <a href="#" class="btn btn-primary">Voir le dossier</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dossier-articles">
+                        <div class="dossier-main-image">
+                            <img src="https://images.unsplash.com/photo-1617265818422-e0c8fcaed131?w=500&h=300&fit=crop" alt="USA-Afrique">
+                        </div>
+                        <div class="dossier-list">
+                            <article class="dossier-item">
+                                <h4>Politique americaine en Afrique : quelles consequences pour le continent ?</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 29.08.2025</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>AGOA : l'accord commercial preferentiel USA-Afrique en question</h4>
+                                <div class="item-meta">
+                                    <span>Actualite</span>
+                                    <span>Mis a jour le 01.09.2025</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Investissements americains en Afrique : quels secteurs privilegies ?</h4>
+                                <div class="item-meta">
+                                    <span>Actualite</span>
+                                    <span>Publie le 07.08.2025</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Testez vos connaissances !</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <article class="quiz-card">
+                        <div class="quiz-image">
+                            <span class="quiz-badge">Quiz</span>
+                            <img src="https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?w=300&h=200&fit=crop" alt="Quiz capitales">
+                        </div>
+                        <div class="quiz-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>[Quiz] Quels sont les aeroports les plus frequentes en Afrique ?</h3>
+                        <div class="quiz-meta">
+                            <span>Quiz</span>
+                            <span>Publie le 05.12.2024</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="quiz-card">
+                        <div class="quiz-image">
+                            <span class="quiz-badge">Quiz</span>
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop" alt="Quiz festivals">
+                        </div>
+                        <div class="quiz-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>[Quiz] Connaissez-vous les festivals de musique africains ?</h3>
+                        <div class="quiz-meta">
+                            <span>Quiz</span>
+                            <span>Publie le 19.07.2024</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="quiz-card">
+                        <div class="quiz-image">
+                            <span class="quiz-badge">Quiz</span>
+                            <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=300&h=200&fit=crop" alt="Quiz monnaies">
+                        </div>
+                        <div class="quiz-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>[Quiz] Connaissez-vous les monnaies africaines ?</h3>
+                        <div class="quiz-meta">
+                            <span>Quiz</span>
+                            <span>Publie le 03.10.2024</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Defense Section -->
+    <section class="featured-dossier dossier-blue py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <span class="dossier-label">A la Une</span>
+                    <h2 class="dossier-title">Defense et securite</h2>
+                    <p class="dossier-description">
+                        L'Union Africaine developpe sa propre architecture de paix et de securite.
+                        Avec la Force africaine en attente et les mecanismes de prevention des conflits,
+                        le continent construit ses capacites de reponse aux crises.
+                    </p>
+                    <a href="#" class="btn btn-primary">Voir le dossier</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dossier-articles">
+                        <div class="dossier-main-image">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&h=300&fit=crop" alt="Defense">
+                        </div>
+                        <div class="dossier-list">
+                            <article class="dossier-item">
+                                <h4>Defense : quels pays participent aux operations de paix africaines ?</h4>
+                                <div class="item-meta">
+                                    <span>Cartes et comparatifs</span>
+                                    <span>Mis a jour le 29.01.2026</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>La Force africaine en attente : ou en est-on ?</h4>
+                                <div class="item-meta">
+                                    <span>Cartes et comparatifs</span>
+                                    <span>Mis a jour le 13.01.2026</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Depenses militaires : quels pays africains investissent le plus ?</h4>
+                                <div class="item-meta">
+                                    <span>Cartes et comparatifs</span>
+                                    <span>Mis a jour le 28.01.2026</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fake News Section -->
+    <section class="horizontal-section py-5">
+        <div class="container">
+            <div class="section-header d-flex align-items-center mb-4">
+                <h2 class="section-title-side">Lutte contre les fake news</h2>
+                <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&h=200&fit=crop" alt="Liberte presse">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>[Carte] La liberte de la presse en Afrique</h3>
+                        <div class="card-meta">
+                            <span>Cartes et comparatifs</span>
+                            <span>Mis a jour le 06.05.2025</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=300&h=200&fit=crop" alt="Desinformation">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Lutte contre la desinformation : l'action de l'Union Africaine en 3 minutes</h3>
+                        <div class="card-meta">
+                            <span>Synthese</span>
+                            <span>Publie le 29.07.2025</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=300&h=200&fit=crop" alt="Podcast">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>[Podcast] Fake news : que fait l'Union Africaine contre la desinformation ?</h3>
+                        <div class="card-meta">
+                            <span>Podcasts</span>
+                            <span>Publie le 07.03.2025</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Section -->
+    <section class="featured-dossier dossier-beige py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <span class="dossier-label">A la Une</span>
+                    <h2 class="dossier-title">Les enjeux du numerique</h2>
+                    <p class="dossier-description">
+                        Le developpement du numerique en Afrique souleve de nombreux enjeux :
+                        inclusion digitale, protection des donnees, regulation des plateformes
+                        ou encore developpement des infrastructures.
+                    </p>
+                    <a href="#" class="btn btn-primary">Voir le dossier</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dossier-articles">
+                        <div class="dossier-main-image">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=300&fit=crop" alt="Numerique">
+                        </div>
+                        <div class="dossier-list">
+                            <article class="dossier-item">
+                                <h4>La politique numerique de l'Union Africaine</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 04.08.2025</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Intelligence artificielle : que fait l'Union Africaine ?</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 04.08.2025</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Numerique : les initiatives africaines pour reguler internet</h4>
+                                <div class="item-meta">
+                                    <span>Questions-Reponses</span>
+                                    <span>Mis a jour le 05.12.2025</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="horizontal-section py-5">
+        <div class="container">
+            <div class="section-header d-flex align-items-center mb-4">
+                <h2 class="section-title-side">Histoire de l'Afrique</h2>
+                <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <span class="card-badge">3</span>
+                            <img src="https://images.unsplash.com/photo-1569511166187-97eb6e387e19?w=300&h=200&fit=crop" alt="Histoire">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>L'histoire de l'Union Africaine en 3 minutes</h3>
+                        <div class="card-meta">
+                            <span>Synthese</span>
+                            <span>Mis a jour le 25.04.2025</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?w=300&h=200&fit=crop" alt="OUA">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>25 mai 1963 : de la creation de l'OUA a l'Union Africaine</h3>
+                        <div class="card-meta">
+                            <span>Synthese</span>
+                            <span>Publie le 01.07.2025</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=300&h=200&fit=crop" alt="Decolonisation">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>La decolonisation de l'Afrique : une histoire en mouvement</h3>
+                        <div class="card-meta">
+                            <span>Synthese</span>
+                            <span>Publie le 01.07.2025</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Energy Section -->
+    <section class="featured-dossier dossier-green py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <span class="dossier-label">A la Une</span>
+                    <h2 class="dossier-title">Energie</h2>
+                    <p class="dossier-description">
+                        Riches en ressources naturelles, les pays africains cherchent a assurer
+                        leur securite energetique tout en accelerant la transition vers les
+                        energies renouvelables.
+                    </p>
+                    <a href="#" class="btn btn-primary">Voir le dossier</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dossier-articles">
+                        <div class="dossier-main-image">
+                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&h=300&fit=crop" alt="Energie">
+                        </div>
+                        <div class="dossier-list">
+                            <article class="dossier-item">
+                                <h4>L'energie en Afrique : etat des lieux</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 29.11.2024</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Transition energetique : les ambitions africaines</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 27.01.2026</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>L'approvisionnement en energies renouvelables en Afrique</h4>
+                                <div class="item-meta">
+                                    <span>Actualite</span>
+                                    <span>Publie le 02.07.2025</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maps Section -->
+    <section class="horizontal-section py-5">
+        <div class="container">
+            <div class="section-header d-flex align-items-center mb-4">
+                <h2 class="section-title-side">L'Afrique en cartes</h2>
+                <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://cdn.pixabay.com/photo/2012/10/10/10/28/africa-60570_640.jpg" alt="Pays UA">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Les pays de l'Union Africaine</h3>
+                        <div class="card-meta">
+                            <span>Publie le 21.06.2024</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=300&h=200&fit=crop" alt="Regions">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Les communautes economiques regionales africaines</h3>
+                        <div class="card-meta">
+                            <span>Publie le 01.01.2025</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=300&h=200&fit=crop" alt="Candidats">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Les pays observateurs de l'Union Africaine</h3>
+                        <div class="card-meta">
+                            <span>Publie le 20.01.2025</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environment Section -->
+    <section class="featured-dossier dossier-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <span class="dossier-label">A la Une</span>
+                    <h2 class="dossier-title">Politiques de l'environnement et Grande Muraille Verte</h2>
+                    <p class="dossier-description">
+                        Changement climatique, desertification, preservation de la biodiversite...
+                        l'Union Africaine met en oeuvre des initiatives ambitieuses pour atteindre
+                        ses objectifs environnementaux.
+                    </p>
+                    <a href="#" class="btn btn-primary">Voir le dossier</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dossier-articles">
+                        <div class="dossier-main-image">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&h=300&fit=crop" alt="Environnement">
+                        </div>
+                        <div class="dossier-list">
+                            <article class="dossier-item">
+                                <h4>La politique africaine de l'environnement et du climat</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 14.11.2024</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Qu'est-ce que la Grande Muraille Verte pour l'Afrique ?</h4>
+                                <div class="item-meta">
+                                    <span>Questions-Reponses</span>
+                                    <span>Mis a jour le 22.12.2025</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Climat : quelles mesures prises par les pays africains ?</h4>
+                                <div class="item-meta">
+                                    <span>Actualite</span>
+                                    <span>Mis a jour le 29.05.2024</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Info Section -->
+    <section class="horizontal-section py-5">
+        <div class="container">
+            <div class="section-header d-flex align-items-center mb-4">
+                <h2 class="section-title-side">Informations pratiques</h2>
+                <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=300&h=200&fit=crop" alt="Voyage">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Voyager en Afrique : quels sont vos droits ?</h3>
+                        <div class="card-meta">
+                            <span>Droits et demarches</span>
+                            <span>Mis a jour le 21.01.2026</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop" alt="Stage">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Faire un stage dans une institution de l'Union Africaine</h3>
+                        <div class="card-meta">
+                            <span>Droits et demarches</span>
+                            <span>Mis a jour le 28.04.2025</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="horizontal-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&h=200&fit=crop" alt="CV">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Travailler en Afrique : guide pratique</h3>
+                        <div class="card-meta">
+                            <span>Droits et demarches</span>
+                            <span>Publie le 05.05.2025</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AU Commission Section -->
+    <section class="featured-dossier dossier-lightblue py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <span class="dossier-label">A la Une</span>
+                    <h2 class="dossier-title">Commission de l'Union Africaine</h2>
+                    <p class="dossier-description">
+                        La Commission de l'Union Africaine siege a Addis-Abeba et incarne le pouvoir
+                        executif de l'organisation. Ses commissaires aux portefeuilles varies sont
+                        a l'initiative des politiques panafricaines.
+                    </p>
+                    <a href="#" class="btn btn-primary">Voir le dossier</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dossier-articles">
+                        <div class="dossier-main-image">
+                            <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?w=500&h=300&fit=crop" alt="Commission UA">
+                        </div>
+                        <div class="dossier-list">
+                            <article class="dossier-item">
+                                <h4>Composition, fonctionnement, role : tout savoir sur la Commission de l'UA</h4>
+                                <div class="item-meta">
+                                    <span>Questions-Reponses</span>
+                                    <span>Mis a jour le 01.12.2024</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Qui sont les commissaires de l'Union Africaine ?</h4>
+                                <div class="item-meta">
+                                    <span>Portraits</span>
+                                    <span>Mis a jour le 01.08.2025</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>[Podcast] Quel est le role de la Commission de l'UA ?</h4>
+                                <div class="item-meta">
+                                    <span>Podcasts</span>
+                                    <span>Publie le 21.05.2024</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential UA Section -->
+    <section class="essential-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center">L'essentiel sur l'UA</h2>
+            <p class="section-subtitle text-center">3 articles pour mieux comprendre les bases de l'Union Africaine</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <article class="essential-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=400&h=250&fit=crop" alt="UA">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Qu'est-ce que l'Union Africaine ?</h3>
+                        <div class="card-meta">
+                            <span>Synthese</span>
+                            <span>Mis a jour le 19.06.2025</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="essential-card">
+                        <div class="card-image">
+                            <img src="https://cdn.pixabay.com/photo/2012/10/10/10/28/africa-60570_640.jpg" alt="Regions">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>[Cartes] UA, CEDEAO, Zone CFA : quelles differences ?</h3>
+                        <div class="card-meta">
+                            <span>Cartes et comparatifs</span>
+                            <span>Mis a jour le 01.01.2026</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="essential-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=400&h=250&fit=crop" alt="Pays">
+                        </div>
+                        <div class="card-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3>Les pays de l'Union Africaine</h3>
+                        <div class="card-meta">
+                            <span>Publie le 21.06.2024</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutions Section -->
+    <section class="featured-dossier dossier-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <span class="dossier-label">A la Une</span>
+                    <h2 class="dossier-title">L'essentiel sur les institutions africaines</h2>
+                    <p class="dossier-description">
+                        Comme chaque organisation qui la compose, l'Union Africaine compte plusieurs
+                        institutions et organes visant a assurer son fonctionnement. Histoire,
+                        pouvoirs, debats : l'essentiel a connaitre sur les institutions africaines.
+                    </p>
+                    <a href="#" class="btn btn-primary">Voir le dossier</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dossier-articles">
+                        <div class="dossier-main-image">
+                            <img src="https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?w=500&h=300&fit=crop" alt="Institutions">
+                        </div>
+                        <div class="dossier-list">
+                            <article class="dossier-item">
+                                <h4>Les institutions africaines</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Publie le 19.12.2024</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Les traites et les institutions africaines en 3 minutes</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 19.12.2024</span>
+                                </div>
+                            </article>
+                            <article class="dossier-item">
+                                <h4>Addis-Abeba : ou siegent les institutions africaines ?</h4>
+                                <div class="item-meta">
+                                    <span>Synthese</span>
+                                    <span>Mis a jour le 14.01.2025</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center text-primary">Les evenements de Toute l'Afrique</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-label">Le</span>
+                            <span class="date-value">07 fevrier 2026</span>
+                        </div>
+                        <div class="event-arrow"><i class="bi bi-arrow-down"></i></div>
+                        <h3 class="event-title">Mini-conferences - Une heure pour comprendre l'Afrique</h3>
+                        <p class="event-description">
+                            Une heure pour comprendre l'Afrique, c'est le defi des mini-conferences
+                            ou vous apprendrez que l'Afrique, ce n'est pas si complique !
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-dark">Tous les evenements</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <p class="services-intro">Toutelafrique.ua est le site de reference sur les questions africaines.</p>
+                    <h3 class="services-title">Nos prestations</h3>
+                    <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span>
+                    <a href="#" class="btn btn-outline-dark mt-4">Qui sommes-nous ?</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="services-list">
+                        <a href="#" class="service-item">
+                            <span>Devenez partenaire pedagogique</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                        <a href="#" class="service-item">
+                            <span>Organisez une conference sur un sujet africain</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                        <a href="#" class="service-item">
+                            <span>Formez-vous aux questions africaines</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section class="podcast-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="podcast-cover">
+                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=300&h=300&fit=crop" alt="Podcast">
+                        <div class="podcast-overlay">
+                            <span class="podcast-badge">3 MINUTES</span>
+                            <span class="podcast-subtitle">POUR COMPRENDRE L'AFRIQUE</span>
+                            <span class="podcast-label">LE PODCAST</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p class="podcast-text">
+                        Sante, economie, diplomatie ou encore agriculture :
+                        <a href="#">cette serie audio courte et accessible</a> vous
+                        permettra d'apprehender facilement l'action de
+                        l'Union Africaine dans tous les domaines.
+                    </p>
+                    <p class="podcast-text">
+                        Abonnez-vous sur votre plateforme d'ecoute preferee :
+                        <a href="#">Spotify</a>, <a href="#">Apple podcasts</a>,
+                        <a href="#">Deezer</a>, <a href="#">Podcast addict</a>,
+                        <a href="#">Youtube Music</a> ou <a href="#">Ausha</a>.
+                    </p>
+                    <div class="podcast-platforms">
+                        <a href="#" class="platform-btn"><i class="bi bi-apple"></i> iTunes</a>
+                        <a href="#" class="platform-btn"><i class="bi bi-spotify"></i> Spotify</a>
+                        <a href="#" class="platform-btn"><i class="bi bi-broadcast"></i> Overcast</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4 class="footer-title">FORMATS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Actualite</a></li>
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Breves</a></li>
+                        <li><a href="#">Cartes et comparatifs</a></li>
+                        <li><a href="#">Droits et demarches</a></li>
+                        <li><a href="#">Fact checking</a></li>
+                        <li><a href="#">Glossaire</a></li>
+                        <li><a href="#">Infographies</a></li>
+                        <li><a href="#">Interviews et debats</a></li>
+                        <li><a href="#">Podcasts</a></li>
+                        <li><a href="#">Portraits</a></li>
+                        <li><a href="#">Pour / Contre</a></li>
+                        <li><a href="#">Questions-Reponses</a></li>
+                        <li><a href="#">Syntheses</a></li>
+                        <li><a href="#">Quiz</a></li>
+                    </ul>
+                    <h4 class="footer-title mt-4">PODCASTS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">L'Afrique en 3 minutes</a></li>
+                        <li><a href="#">Explique-moi l'Afrique</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="footer-title">THEMES</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tourisme durable pour le développement</a></li>
+                        <li><a href="#">Economie et social</a></li>
+                        <li><a href="#">Environnement</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Sport</a></li>
+                        <li><a href="#">Institutions</a></li>
+                        <li><a href="#">L'Afrique et le monde</a></li>
+                        <li><a href="#">Societe</a></li>
+                        <li><a href="#">Loisirs et découverte</a></li>
+                        <li><a href="#">Tous les dossiers</a></li>
+                    </ul>
+                    <h4 class="footer-title mt-4">PAYS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Les pays de l'Union Africaine</a></li>
+                        <li><a href="#">Les Etats membres en un clin d'oeil</a></li>
+                        <li><a href="#">Les communautes economiques regionales</a></li>
+                        <li><a href="#">Les pays observateurs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="footer-title">A PROPOS</h4>
+                    <ul class="footer-links">
+                        <li><a href="a-propos.html">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Nos evenements</a></li>
+                        <li><a href="#">Nos membres</a></li>
+                        <li><a href="#">Nos partenaires</a></li>
+                        <li><a href="#">Mentions legales</a></li>
+                    </ul>
+                    <h4 class="footer-title mt-4">NOS PRESTATIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Devenez partenaire pedagogique</a></li>
+                        <li><a href="#">Formez-vous aux questions africaines</a></li>
+                        <li><a href="#">Organisation d'un evenement</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="footer-title">CONTACT</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#">Nous rejoindre</a></li>
+                    </ul>
+                    <h4 class="footer-title mt-4">SUIVEZ-NOUS</h4>
+                    <div class="social-icons-footer">
+                        <a href="#" class="social-icon" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-icon" title="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                    <div class="footer-extra mt-4">
+                        <a href="#">Archives</a>
+                        <a href="#">Apprendre une langue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>

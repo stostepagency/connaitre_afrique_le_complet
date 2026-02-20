@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Connaitrel'afrique.ua</title>
+    <meta name="description" content="Contactez l'equipe de Toutel'afrique.ua">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="header-row d-flex align-items-center justify-content-between w-100">
+                    <!-- Logo à gauche -->
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <div class="logo">
+                            <span class="logo-toute">Connaitre</span>
+                            <span class="logo-afrique">l'afrique</span>
+                        </div>
+                    </a>
+
+                    <!-- Navigation au centre -->
+                    <div class="header-nav d-none d-lg-flex mx-auto">
+                        <a href="#" class="nav-item-link">Thèmes</a>
+                        <a href="pays.html" class="nav-item-link">Pays Africains</a>
+                        <a href="#" class="nav-item-link">L'Afrique Pratique</a>
+                        <a href="article.html" class="nav-item-link">Lignes éditoriales</a>
+                        <a href="#" class="nav-item-link">Newsletter</a>
+                    </div>
+
+                    <!-- Recherche et mode sombre à droite -->
+                    <div class="header-right d-flex align-items-center">
+                        <div class="search-box d-none d-md-flex align-items-center me-2">
+                            <input type="text" class="search-input form-control" placeholder="Rechercher..." id="headerSearchInput">
+                            <button class="search-btn btn btn-link p-0" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <button class="btn btn-link search-toggle-mobile d-md-none p-0 me-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <button class="btn btn-link p-0 dark-mode-toggle me-2" type="button" title="Mode sombre">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                        <button class="btn btn-link menu-toggle d-lg-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                            <i class="bi bi-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Side Menu Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+        <div class="offcanvas-header">
+            <div class="logo">
+                <span class="logo-toute">toute</span>
+                <span class="logo-afrique">l'afrique</span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column menu-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="pays.html">Pays de l'UA</a></li>
+                <li class="nav-item"><a class="nav-link" href="article.html">Actualite</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Rechercher sur Toutel'afrique.ua</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form class="search-form" id="searchForm">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg" id="searchInput" placeholder="Rechercher un article, un pays, un theme...">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div id="searchResults" class="search-results mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="contact-title">Contactez-nous</h1>
+                    <p class="contact-subtitle">Une question, une suggestion, une demande de partenariat ? Notre equipe est a votre ecoute.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper">
+                        <h2>Envoyez-nous un message</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">Prenom *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Nom *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Telephone</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Sujet *</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">Choisissez un sujet</option>
+                                        <option value="question">Question generale</option>
+                                        <option value="partnership">Proposition de partenariat</option>
+                                        <option value="press">Demande presse</option>
+                                        <option value="correction">Signaler une erreur</option>
+                                        <option value="suggestion">Suggestion d'article</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" rows="6" required placeholder="Votre message..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Je souhaite recevoir la newsletter de Toutel'afrique.ua
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacy" required>
+                                        <label class="form-check-label" for="privacy">
+                                            J'accepte la <a href="#">politique de confidentialite</a> *
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-send me-2"></i>Envoyer le message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <div class="success-icon">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <h3>Message envoye !</h3>
+                            <p>Merci pour votre message. Notre equipe vous repondra dans les plus brefs delais.</p>
+                            <button type="button" class="btn btn-outline-primary" onclick="resetForm()">Envoyer un autre message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h2>Informations</h2>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Adresse</h4>
+                                <p>123 Avenue de l'Union Africaine<br>Addis-Abeba, Ethiopie</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:contact@toutelafrique.ua">contact@toutelafrique.ua</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Telephone</h4>
+                                <p>+251 11 123 4567</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="bi bi-clock-fill"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Horaires</h4>
+                                <p>Lundi - Vendredi : 9h - 18h<br>Samedi : 9h - 13h</p>
+                            </div>
+                        </div>
+
+                        <div class="social-contact mt-4">
+                            <h4>Suivez-nous</h4>
+                            <div class="social-buttons">
+                                <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="faq-section mt-5">
+                        <h3>Questions frequentes</h3>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        Comment proposer un article ?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Vous pouvez nous envoyer votre proposition via le formulaire ci-contre en selectionnant "Suggestion d'article" comme sujet.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Comment devenir partenaire ?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Nous sommes toujours ouverts aux partenariats. Contactez-nous avec votre proposition detaillee.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        Comment signaler une erreur ?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Si vous constatez une erreur dans l'un de nos articles, utilisez le formulaire avec le sujet "Signaler une erreur" en precisant l'URL de l'article concerne.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section-contact">
+        <div class="container-fluid p-0">
+            <div class="map-placeholder">
+                <div class="map-overlay-text">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Addis-Abeba, Ethiopie - Siege de l'Union Africaine</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo mb-4">
+                        <span class="logo-toute" style="color: #E67E22;">toute</span>
+                        <span class="logo-afrique" style="color: #E67E22;">l'afrique</span>
+                    </div>
+                    <p class="footer-desc">Le site de reference sur les questions africaines.</p>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="footer-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="pays.html">Pays de l'UA</a></li>
+                        <li><a href="article.html">Actualite</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="footer-title">Themes</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tourisme durable pour le développement</a></li>
+                        <li><a href="#">Economie et social</a></li>
+                        <li><a href="#">Environnement</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Sport</a></li>
+                        <li><a href="#">Institutions</a></li>
+                        <li><a href="#">L'Afrique et le monde</a></li>
+                        <li><a href="#">Societe</a></li>
+                        <li><a href="#">Loisirs et découverte</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@toutelafrique.ua">contact@toutelafrique.ua</a></li>
+                        <li><a href="#">Mentions legales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 border-top">
+                <p class="mb-0 text-center">&copy; 2026 Toutel'afrique.ua - Tous droits reserves</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+    <!-- Contact Form JS -->
+    <script>
+        // Contact Form Handler
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
+
+            // Simulate form submission
+            const $btn = $(this).find('button[type="submit"]');
+            const originalText = $btn.html();
+
+            $btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2"></span>Envoi en cours...');
+
+            setTimeout(() => {
+                $('#contactForm').hide();
+                $('#successMessage').fadeIn();
+            }, 1500);
+        });
+
+        function resetForm() {
+            $('#contactForm')[0].reset();
+            $('#successMessage').hide();
+            $('#contactForm').show();
+            $('#contactForm button[type="submit"]').prop('disabled', false).html('<i class="bi bi-send me-2"></i>Envoyer le message');
+        }
+    </script>
+</body>
+</html>
